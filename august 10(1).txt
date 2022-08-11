@@ -1,0 +1,35 @@
+//program to replace x and y values
+#include <stdio.h>
+int main() 
+{
+    int num,r,x,y,d=1,sum=0;
+    printf("Enter a number:");
+    scanf("%d",&num);
+    printf("Enter x value :");
+    scanf("%d",&x);
+    printf("Enter the y value to replace in x:");
+    scanf("%d",&y);
+    while(num>0)
+    {
+        r=num%10;
+        if(r==x)
+           sum=sum+y*d;
+        else
+           sum=sum+r*d;
+        d=d*10;
+        num=num/10;
+    }
+    printf("After replacing value of y in x is:%d",sum);
+    return 0;
+}
+output:
+Enter a number:16918
+Enter x value :1
+Enter the y value to replace in x:7
+After replacing value of y in x is:76978
+output:
+
+Enter a number:120364
+Enter x value :3
+Enter the y value to replace in x:5
+After replacing value of y in x is:120564
