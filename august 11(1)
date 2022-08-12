@@ -1,0 +1,22 @@
+//program on leetcode
+int subtractProductAndSum(int num)
+{
+  int r,sum=0,product=1;
+    while(num>0)
+    {
+        r=num%10;
+        sum=sum+r;
+        product=product*r;
+        num=num/10;
+    }
+    return product-sum;
+}
+
+Accepted
+Runtime: 0 ms
+Your input
+234
+Output
+15
+Expected
+15
