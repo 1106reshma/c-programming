@@ -1,0 +1,20 @@
+//leetcode program 2
+int arrangeCoins(int num)
+{
+  int i,coin=0;
+    for(i=1;i<=num;i++)
+    {
+        if((num-i)<0)
+        break;
+        coin++;
+        num=num-i;
+    }
+    return coin;
+}
+
+Your input
+5
+Output
+2
+Expected
+2
