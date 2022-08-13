@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() 
+{
+    int i,j;
+    int n;
+    scanf("%d", &n);
+    int size=n+(n-1);
+    int a[size][size];
+    int first=0,last=size-1;
+    while(n>0)
+    {
+        for(i=first;i<=last;i++)
+         {
+             for(j=first;j<=last;j++)
+             {
+                 if(i==first||j==first||i==last||j==last)
+                 a[i][j]=n;
+             }
+         }
+         first++;
+         last--;
+  	      n--;
+    }
+    for(i=0;i<size;i++)
+    {
+      for(j=0;j<size;j++)
+      {
+          printf("%d ",a[i][j]);
+          
+      }
+      printf("\n");
+    }
+    return 0;
+}
+OUTPUT:
+Input (stdin)
+2
+Your Output (stdout)
+2 2 2 
+2 1 2 
+2 2 2 
+Expected Output:
+2 2 2
+2 1 2
+2 2 2
