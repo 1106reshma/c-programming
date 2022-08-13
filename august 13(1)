@@ -1,0 +1,50 @@
+//program to print the following pattern for n lines
+#include <stdio.h>
+int main()
+{
+   int i,j,T=65,t=97,n;
+   printf("Enter any number:");
+   scanf("%d",&n);
+   for(i=1;i<=n;i++)
+    {
+      for(j=1;j<=i;j++)
+      {
+        printf("%c%c \t",T,t);
+        t++;
+        T++;
+      }
+     printf("\n");
+     }
+    return 0;
+}
+
+//2nd metod to solve the given pattern
+
+#include <stdio.h>
+int main()
+{
+   int i,j,n;
+   char capital='A',small='a';
+   printf("Enter a number:");
+   scanf("%d",&n);
+   for(i=1;i<=n;i++)
+    {
+      for(j=1;j<=i;j++)
+      {
+        printf("%c%c\t",capital,small);
+        capital++;
+        small++;
+      }
+     printf("\n");
+     }
+    return 0;
+}
+
+OUTPUT:
+output:
+Enter any number:5
+Aa 	
+Bb 	Cc 	
+Dd 	Ee 	Ff 	
+Gg 	Hh 	Ii 	Jj 	
+Kk 	Ll 	Mm 	Nn 	Oo 	
