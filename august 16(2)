@@ -1,0 +1,34 @@
+//program to check each and every number of array if it is prime or not and display all prime numbers of array from right to left
+#include <stdio.h>
+int main()
+{
+  int i,j,arr[5],temp,n;
+  printf("Enter elements into array:\n");
+  for(i=0;i<5;i++)
+  scanf("%d ",&arr[i]);
+  printf("The prime numbers of given array are:");
+  for(i=0;i<5;i++)
+  {
+      temp=0;
+      for(j=2;j<arr[i];j++)
+      {
+          if(arr[i]%j==0)
+          {
+              temp=1;
+              break;
+          }
+      }
+      if(temp==0)
+      printf("%d ",arr[i]);
+  }
+    return 0;
+}
+output:
+Enter elements into array:
+5
+9
+7
+8
+2
+3
+The prime numbers of given array are:5 7 2 
