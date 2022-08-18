@@ -1,0 +1,35 @@
+//program to find the missing number in given consecutive series
+#include<stdio.h>
+int main()
+{
+	 int i,n,sum=0,k;
+	 printf("enter the size of an array:");
+	 scanf("%d",&n);
+	int arr[n];
+	 printf("values of an array : \t");
+	 for(i=0;i<n-1;i++)
+	 {
+	     scanf("%d",&arr[i]);
+	     sum=sum+arr[i];
+	 }
+	 k = (n*(n+1))/2 - sum;
+	 printf("missing number from given consecutive series is = %d", k);
+	return 0; 
+}
+
+output:
+enter the size of an array:5
+values of an array:1
+3
+4
+5
+missing number from given consecutive series is = 2
+output :2
+enter the size of an array:7
+values of an array:1
+2
+3
+4
+5
+7
+missing number from given consecutive series is = 6
