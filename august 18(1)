@@ -1,0 +1,21 @@
+//program to find given array is unique or duplicate
+#include<stdio.h>
+int main()
+{
+    int i,j,temp=0;
+    int arr[]={2,3,5,80,60,45,60};
+    int len=sizeof(arr)/sizeof(int);
+    for(i=0;i<len;i++)
+    {
+        for(j=i+1;j<len;j++)
+        {
+            if(arr[i]==arr[j])
+                temp++;
+         }
+    }
+    if (temp==0)
+       printf("UNIQUE");
+    else
+       printf("DUPLICATE");
+       return 0;
+}
