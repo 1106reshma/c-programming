@@ -1,0 +1,35 @@
+//program to find sum of n factorial
+#include<stdio.h>
+int main()
+{
+    int arr[5],n=1,i,fact=1,sum=0;
+    printf("Enter array elements");
+    for(i=0;i<3;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    printf("Factors are:");
+    for(i=0;i<3;i++)
+    {
+        if(arr[i]<10)
+        {
+            for(n=1;n<=arr[i];n++)
+            {
+                fact=fact*n;
+            }
+            printf("The factorial of %d is:%d\n",arr[i],fact);
+            sum=sum+fact;
+        }
+        fact=1;
+    }
+    printf("Sum of  factorials is %d",sum);
+    return 0;
+}
+output:
+Enter array elements4
+2
+6
+Factors are:The factorial of 4 is:24
+The factorial of 2 is:2
+The factorial of 6 is:720
+Sum of  factorials is 746
