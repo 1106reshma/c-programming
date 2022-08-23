@@ -1,0 +1,48 @@
+//program to find sum of single row given in run time
+#include<stdio.h>
+int main()
+{
+	int a[100][100];
+	int i,j,r,c,sum,n;
+	printf("Enter how many rows \n");
+	scanf("%d",&r);
+	printf("Enter how many cols \n");
+	scanf("%d",&c);
+	printf("Enter elements into array \n");
+	for(i=0;i<r;i++)
+	{
+		for(j=0;j<c;j++)
+		{
+			scanf("%d",&a[i][j]);
+		}
+	}
+	printf("enter the row to add ");
+   scanf("%d",&n);
+	for(i=n;i<r;i++)
+	{
+	    sum=0; 
+	    for(j=0;j<c;j++)
+		{
+			sum=sum+a[i][j]	;
+		}
+		printf(" %d Row sum= %d \n",i,sum);
+		break;
+	}
+	return 0;
+	}
+Enter how many rows 
+3
+Enter how many cols 
+3
+Enter elements into array 
+5
+4
+6
+8
+7
+9
+2
+3
+1
+enter the row to add 0
+0 Row sum= 15 
