@@ -1,0 +1,44 @@
+//program to print sum of columns
+#include<stdio.h>
+int main()
+{
+	int a[100][100];
+	int i,j,r,c,n,sum;
+	printf("Enter how many rows \n");
+	scanf("%d",&r);
+	printf("Enter how many cols \n");
+	scanf("%d",&c);
+	printf("Enter elements into array \n");
+	for(i=0;i<r;i++)
+	{
+		for(j=0;j<c;j++)
+		{
+			scanf("%d",&a[i][j]);
+		}
+	}
+	printf("enter the column to add ");
+   scanf("%d",&n);
+	for(i=n;i<r;i++)
+	{
+		for(j=0;j<c;j++)
+		{
+		  sum=sum+a[j][i];
+		}
+		printf(" %d column sum= %d \n",n,sum);
+		break;
+	}
+	return 0;
+}
+output:
+Enter how many rows 
+4
+Enter how many cols 
+4
+Enter elements into array 
+7 8 9 4
+4 5 6 8 
+7 8 9 1 
+2 4 8 5
+enter the column to add 3
+3 column sum= 18 
+
