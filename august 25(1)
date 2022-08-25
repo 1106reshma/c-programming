@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+void main()
+{
+    char s[50];
+    int count=0,i;
+    printf("Enter the string:\n");
+    scanf("%[^\n]s", s);
+    for (i=0;s[i]!='\0';i++)
+    {
+        if (s[i]==' ')
+        count++;    
+    }
+    printf("Number of words in given string: %d\n",count+1);
+}
+
+output:
+Enter the string:
+i love india
+Number of words in given string: 3
+
+Enter the string:
+i am studying in aditya degree college
+Number of words in given string: 7
