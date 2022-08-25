@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char str[30];
+    int i;
+    printf("Enter string : ");
+    gets(str);
+    for(i=0;str[i]!='\0';i++)
+    {
+        if((i%2)==0)
+            str[i]=str[i]-32;
+    }
+    printf("after conversion of string is: \n%s",str);
+    return 0;
+}
+
+output:
+Enter string : adityadegreecollege
+after conversion of string is: 
+AdItYaDeGrEeCoLlEgE
