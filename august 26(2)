@@ -1,0 +1,42 @@
+#include <stdio.h>
+int main() 
+{
+   char s[20];
+   char temp;
+   int i,j,size;
+   printf("Enter a string: ");
+   gets(s);
+   size=strlen(s);
+   i=0;
+   j=size-1;
+   while(i<(size-1))
+   {
+     temp=s[i];
+     s[i]=s[j];
+     s[j]=temp;
+     i++;
+     j--;
+     while(i<(size/2))
+    {
+      if(s[i]==s[j])
+      {
+         printf("palindrom\n");
+         break;
+      }
+    
+      else
+      {
+         printf("not palindrome\n");
+         break;
+      }
+    }
+   
+    return 0;
+   }
+}
+
+OUTPUT:
+Enter a string: reshma
+not palindrome
+Enter a string: madam
+palindrome
