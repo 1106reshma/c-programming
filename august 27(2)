@@ -1,0 +1,34 @@
+#include<stdio.h>
+#include<string.h>
+void substring(char str[],int n)
+{
+    int x,i,k,j;
+    for(i=1;i<=n;i++)
+    {
+        for (j=0;j<=n-i;j++)
+        {
+            int x=j+i;
+            for(k=j;k<x;k++)
+              printf("%c\t",str[k]);
+            printf("\n");
+        }
+    }
+}
+int main()
+{
+    char str[]="1234";
+    substring(str,strlen(str));
+    return 0;
+}
+output
+1
+2	
+3	
+4	
+1	2	
+2	3	
+3	4	
+1	2	3	
+2	3	4	
+1	2	3	4	
+
