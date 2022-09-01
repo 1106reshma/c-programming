@@ -1,0 +1,23 @@
+//program of factorial using recursive
+#include<stdio.h>
+void main() 
+{
+    int n,ans;
+    printf("enter a number:");
+    scanf("%d",&n);
+    ans=fact(n);
+    printf("factorial of %d is =%d",n,ans);
+}
+int fact (int n)
+{
+    int i=1,sum=1;
+    while(i<=n)
+    {
+        sum=sum*i;
+        i++;
+    }
+    return (sum);
+}
+OUTPUT:
+enter a number:7
+factorial of 7 is =5040
