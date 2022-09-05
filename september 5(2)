@@ -1,0 +1,34 @@
+#include <stdio.h>
+void printArray(int arr[], int start, int len);
+int main()
+{
+    int arr[100];
+    int n, i=0;
+    printf("Enter size of the array: ");
+    scanf("%d", &n);
+    printf("Enter elements in the array: ");
+    while( i<n)
+    {
+        scanf("%d", &arr[i]);
+        i++;
+    }
+    printf("Elements in the array: ");
+    printArray(arr, 0, n);
+    return 0;
+}
+void printArray(int arr[], int i, int len)
+{
+   if(i >= len)
+        return;
+    printf("%d ", arr[i]);
+    printArray(arr, i+ 1,len); 
+}
+OUTPUT:
+Enter size of the array: 6
+Enter elements in the array: 2
+4
+8
+10
+12
+14
+Elements in the array: 2 4 8 10 12 14 
