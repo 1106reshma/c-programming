@@ -1,0 +1,23 @@
+//program to print numbers between n and m 
+#include<stdio.h>
+void main()
+{
+    int n,m;
+    printf("Enter n and m values:");
+    scanf("%d %d",&n,&m);
+    display(n,m);
+}
+void display(int n,int m)
+{
+    if(n>m)
+    return 1;
+    else
+    {
+        printf("%3d",n);
+        display(n+1,m);
+    }
+}
+OUTPUT:
+Enter n and m values:35
+52
+35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52
