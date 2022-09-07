@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    int i,n,sum=0,*arr;
+    printf("Enter the number of elements : ");
+    scanf("%d", &n);
+    arr= (int*)malloc(n*sizeof(int));
+    for (i=0;i<n;i++)
+    {
+        scanf("%d", arr+i);
+        sum =sum+ *(arr+i);
+    }
+    printf("sum is %d \n", sum);
+    free(arr);
+    return 0;
+}
+OUTPUT 1:
+Enter the number of elements : 3
+4
+5
+2
+sum is 11 
+output 2:
+Enter the number of elements : 5
+2
+4
+6
+8
+3
+sum is 23 
+
